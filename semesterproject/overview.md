@@ -21,17 +21,17 @@ You can find further information on the respective tasks in the [ERP-Core manusc
 - Data cleaning:
         Time, channel and subjects
 - ERP peak analysis
-        Extract the study-relevant ERP peak subjectwise (e.g. one value per subject) and statistically test them. *RQ: On which ERP-peaks do we find major difference between the conditions?*
+        Extract the study-relevant ERP peak subjectwise (e.g. one value per subject) and statistically test them. *Example RQ: On which ERP-peaks do we find major difference between the conditions?*
 
 Choose 2 out of 4 (include statistics):
 - Mass Univariate
-        Use a multiple regression of the main experimental contrast, controlling for reaction time (you need to calculate RT yourself). *RQ: When/Where do we find differences between our conditions? Is there an influence of reaction time?*
+        Use a multiple regression of the main experimental contrast, controlling for reaction time (you need to calculate RT yourself). *Example RQ: When/Where do we find differences between our conditions? Is there an influence of reaction time?*
 - Decoding analysis
-        Decode the main contrast of the experiment across time *RQ: When is information about the conditions in our data available?*
+        Decode the main contrast of the experiment across time *Example RQ: When is information about the conditions in our data available?*
 - Source space
-        Use source localization to visualize the source of the main experimental contrast *RQ: Where does our effect come from?*
+        Use source localization to visualize the source of the main experimental contrast *Example RQ: Where does our effect come from?*
 - Time Frequency analysis
-        Calculate an induced time-frequency analysis of the main experimental contrast *RQ: What oscillations underley our effect of interest?*
+        Calculate an induced time-frequency analysis of the main experimental contrast *Example RQ: What oscillations underley our effect of interest?*
 
 
 ## Where do I get the data?
