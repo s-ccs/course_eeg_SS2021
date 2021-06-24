@@ -51,10 +51,14 @@ download_CORE.download_erpcore(task="MMN",subject=1,localpath="local/bids/")
 - Write in the ILIAS Forum. Either others will help, or I myself will answer questions.
 
 ## FAQ (will be updated)
-- *Q: The tasks are not described well enough, what exactly am I supposed to do?* - A: This is up to you. The tasks are written as if they are scientific questions that you want to answer them. This also gives you personal freedom to dive into analyses that you find most interesting.
-- *Q: What is the scope of the project? I.e. how detailed should I aim for? * - A: The project should not be a dissertation. If you report goes beyond 40 pages (which depending on the amount of plots can easily happen), you should really think whether you need more pages to make your point.
-- *Q: Am I allowed to use other packages"* - A: In general yes, but. Yes to things like pandas, doit, seaborn, python-meegkit etc. But not readymade pipelines like pyprep,mne-bids-pipeline. While the later is ultimately quite useful, we are working to understand the bits and pieces that make up these pipelines.
-
+- *Q: The tasks are not described well enough, what exactly am I supposed to do?* 
+  - A: This is up to you. The tasks are written as if they are scientific questions that you want to answer them. This also gives you personal freedom to dive into analyses that you find most interesting.
+- *Q: What is the scope of the project? I.e. how detailed should I aim for?*
+  - A: The project should not be a dissertation. If you report goes beyond 40 pages (which depending on the amount of plots can easily happen), you should really think whether you need more pages to make your point.
+- *Q: Am I allowed to use other packages"* 
+  - A: In general yes, but. Yes to things like pandas, doit, seaborn, python-meegkit etc. But not readymade pipelines like pyprep,mne-bids-pipeline. While the later is ultimately quite useful, we are working to understand the bits and pieces that make up these pipelines.
+- *Q: Should I use a single jupyternotebook?*
+  - A: Probably not. It is a good idea to use a notebook to display the data / report / results. But one large notebook quickly becomes messy. I'd recommend to encapsulate code in functions and put them in separate files that you can import and use in your notebook.
 
 ## Format of report
 Please share a git of your project and a report. The git can be on github or on the university gitlab. The report can be a jupyter notebook if you prefer to intermingle code and documentation. The report is there to document your decisions and thoughts along the pipeline. I am especially interested why you chose certain steps / parameters / analyses / visualizations. Make grading easy for me and show that you understood what you are doing and what your results are
