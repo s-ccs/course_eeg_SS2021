@@ -3,6 +3,7 @@ import os
 import mne
 import numpy as np
 import pandas as pd
+from scipy import linalg
 from mne_bids import (BIDSPath, read_raw_bids)
 
 def _get_filepath(bids_root,subject_id,task):
@@ -85,14 +86,14 @@ def sp_read_ica_eeglab(fname, *, verbose=None):
     from scipy import linalg
     eeg = mne.preprocessing.ica._check_load_mat(fname, None)
     info, eeg_montage, _ = mne.preprocessing.ica._get_info(eeg)
-    pick_info(info, np.round(eeg['icachansind']).astype(int) - 1, copy=False)
+    mne.pick_info(info, np.round(eeg['icachansind']).astype(int) - 1, copy=False)
     info.set_montage(eeg_montage)
     
 
     rank = eeg.icasphere.shape[0]
     n_components = eeg.icaweights.shape[0]
 
-    ica = ICA(method='imported_eeglab', n_components=n_components)
+    ica = mne.preprocessing.ica.ICA(method='imported_eeglab', n_components=n_components)
 
     ica.current_fit = "eeglab"
     ica.ch_names = info["ch_names"]
@@ -123,7 +124,7 @@ def sp_read_ica_eeglab(fname, *, verbose=None):
              'possibly due to ICA component removal, assuming icawinv is '
              'correct')
         use = use_check
-    u, s, v = _safe_svd(use, full_matrices=False)
+    u, s, v = mne.preprocessing.ica._safe_svd(use, full_matrices=False)
     ica.unmixing_matrix_ = u * s
     ica.pca_components_ = v
     ica.pca_explained_variance_ = s * s
