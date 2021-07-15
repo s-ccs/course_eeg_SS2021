@@ -83,8 +83,8 @@ def sp_read_ica_eeglab(fname, *, verbose=None):
         An ICA object based on the information contained in the input file.
     """
     from scipy import linalg
-    eeg = _check_load_mat(fname, None)
-    info, eeg_montage, _ = _get_info(eeg)
+    eeg = mne.preprocessing._check_load_mat(fname, None)
+    info, eeg_montage, _ = mne.preprocessing._get_info(eeg)
     pick_info(info, np.round(eeg['icachansind']).astype(int) - 1, copy=False)
     info.set_montage(eeg_montage)
     
