@@ -69,7 +69,7 @@ Now it is time to involve our continuous regressor. In this case it is the basel
 
 In theory baseline corrections are not needed, the baseline (i.e. what happens before stimulus onset, thus "negative" time in an ERP) should be flat / noise around 0, because stimulus order is random. But in practice, we only have limited number of trials and limited randomization. Thus it might be, that we have a bias with in one condition more residual drift / low-frequency activity than in the other. This will "move" the whole ERP curve up/down and bias results later in the epoch.
 
-Classically, baselines are simply subtracted. Thus every point of an ERP recieves the "same" baseline correction. This is equivalent to adding a known parameter to our model: `y ~ b0 * constant + b1 * cond + -1*BSL`. What we will do instead is the 2020-version, we regress the baseline. This allows us to remove less of the baseline activity (or more, but rarely happens).
+Classically, baselines are simply subtracted. Thus every point of an ERP recieves the "same" baseline correction. This is equivalent to adding a known parameter to our model: `y ~ b0 * constant + b1 * cond + 1*BSL`. What we will do instead is the 2020-version, we regress the baseline. This allows us to remove less of the baseline activity (or more, but rarely happens).
 
 **T:** Plot the PO8 actiity against the baseline (you might have done this plot at the beginning of the exercise). Split it up by cond & stim
 

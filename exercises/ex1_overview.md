@@ -34,7 +34,7 @@ import ccs_eeg_utils
 ccs_eeg_utils.download_erpcore(task="P3",subject=2,localpath="../local/bids/")
 
 ```
-And you have to download the following files manually (for now, I will provide better links soon) from osf.io/
+And you have to download the following files manually from https://osf.io/thsqg/
 `["channels.tsv","events.tsv","eeg.fdt","eeg.json","eeg.set"]`
 and put them into `../local/bids/sub-002/ses-P3/eeg/sub-002_ses-P3_task-P3_XYZ` with `XZY` being the filename.
 
