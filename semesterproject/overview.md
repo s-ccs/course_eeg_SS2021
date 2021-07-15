@@ -61,7 +61,7 @@ download_CORE.download_erpcore(task="MMN",subject=1,localpath="local/bids/")
   - A: Probably not. It is a good idea to use a notebook to display the data / report / results. But one large notebook quickly becomes messy. I'd recommend to encapsulate code in functions and put them in separate files that you can import and use in your notebook.
 
 ## Format of report
-Please share a git of your project and a report. The git can be on github or on the university gitlab. The report can be a jupyter notebook if you prefer to intermingle code and documentation. The report is there to document your decisions and thoughts along the pipeline. I am especially interested why you chose certain steps / parameters / analyses / visualizations. Make grading easy for me and show that you understood what you are doing and what your results are
+You can share a git of your project and a report, or the code and the report via Illias. The git can be on github or on the university gitlab. The report can be a jupyter notebook if you prefer to intermingle code and documentation. The report is there to document your decisions and thoughts along the pipeline. I am especially interested why you chose certain steps / parameters / analyses / visualizations. Make grading easy for me and show that you understood what you are doing and what your results are
 
 ## Deadline
 Please hand in the documents until 31.08.2021
